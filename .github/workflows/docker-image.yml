@@ -28,9 +28,9 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ github.repository_owner }}/docker-alpine-extended:latest
+        tags: ghcr.io/${{ github.repository_owner }}docker_test:latest
 
     - name: Verify Docker image
       run: |
-        docker run ghcr.io/${{ github.repository_owner }}/docker-alpine-extended:latest echo "Verify successful"
+        docker run ghcr.io/${{ github.repository_owner }}/docker_test:latest echo "Verify successful"
 
